@@ -32,8 +32,8 @@ async def broadcast(_, message):
         await message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ɪᴛ.")
         return    
     exmsg = await message.reply_text("sᴛᴀʀᴛᴇᴅ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ!")
-    all_chats = (await get_chats()) or {}
-    all_users = (await get_users()) or {}
+    all_chats = (await get_served_chats()) or {}
+    all_users = (await get_served_chats()) or {}
     done_chats = 0
     done_users = 0
     failed_chats = 0
